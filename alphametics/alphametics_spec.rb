@@ -48,5 +48,14 @@ describe Alphametics do
 
       expect(result).to eq(["A + A", "B"])
     end
+
+    it "handles different split arguments" do
+      expression = "A + A"
+
+      result = Alphametics.split(expression, "+")
+
+      expect(result).to eq(["A", "A"])
+    end
+
   end
 end
