@@ -40,5 +40,13 @@ describe Alphametics do
 
       expect(result).to eq(["A + A", "B"])
     end
+
+    it "handles missing spaces in expression" do
+      expression = "A + A =B"
+
+      result = Alphametics.split(expression)
+
+      expect(result).to eq(["A + A", "B"])
+    end
   end
 end
