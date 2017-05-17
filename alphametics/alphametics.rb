@@ -4,6 +4,6 @@ class Alphametics
   end
 
   def self.split(expression)
-    expression.split("=").map { |side| side.strip}
+    expression.split("=").map(&:strip)
   end
 end
