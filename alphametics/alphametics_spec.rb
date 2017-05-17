@@ -3,10 +3,21 @@ require './alphametics'
 
 describe Alphametics do
 
-  it 'replaces characters with valid numbers' do
-    input = "SEND + MORE = MONEY"
+  it 'solves for two-character expression' do
+    expression = "A + A = B"
 
-    result = Alphametics.solve(input)
+    result = Alphametics.solve(expression)
+
+    expect(result).to eq({
+      A: 1,
+      B: 2
+    })
+  end
+
+  xit 'replaces characters with valid numbers' do
+    expression = "SEND + MORE = MONEY"
+
+    result = Alphametics.solve(expression)
 
     expect(result).to eq({
       E: 5,
@@ -19,4 +30,6 @@ describe Alphametics do
       Y: 2
     })
   end
+
+
 end
