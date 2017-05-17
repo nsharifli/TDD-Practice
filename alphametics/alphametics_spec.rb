@@ -3,7 +3,7 @@ require './alphametics'
 
 describe Alphametics do
 
-  it 'solves for two-character expression' do
+  xit 'solves for two-character expression' do
     expression = "A + A = B"
 
     result = Alphametics.solve(expression)
@@ -31,5 +31,13 @@ describe Alphametics do
     })
   end
 
+  describe ".split" do
+    it "splits expression into LHS and RHS" do
+      expression = "A + A = B"
 
+      result = Alphametics.split(expression)
+
+      expect(result).to eq(["A + A", "B"])
+    end
+  end
 end
