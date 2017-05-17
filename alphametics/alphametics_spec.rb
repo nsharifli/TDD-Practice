@@ -36,7 +36,7 @@ describe Alphametics do
     it "splits expression into LHS and RHS" do
       expression = "A + A = B"
 
-      result = Alphametics.split(expression)
+      result = Alphametics.split(expression, "=")
 
       expect(result).to eq(["A + A", "B"])
     end
@@ -44,7 +44,7 @@ describe Alphametics do
     it "handles missing spaces in expression" do
       expression = "A + A =B"
 
-      result = Alphametics.split(expression)
+      result = Alphametics.split(expression, "=")
 
       expect(result).to eq(["A + A", "B"])
     end
