@@ -3,7 +3,7 @@ class Alphametics
     {A: 1, B: 2}
   end
 
-  def self.split(expression)
-    expression.split("=").map(&:strip)
+  def self.split(expression, operator)
+    expression.split(operator).map(&:strip)
   end
 end
