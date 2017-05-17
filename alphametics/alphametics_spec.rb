@@ -1,9 +1,9 @@
-require 'rspec'
-require './alphametics'
+require "rspec"
+require "./alphametics"
 
 describe Alphametics do
 
-  xit 'solves for two-character expression' do
+  xit "solves for two-character expression" do
     expression = "A + A = B"
 
     result = Alphametics.solve(expression)
@@ -14,7 +14,7 @@ describe Alphametics do
     })
   end
 
-  xit 'replaces characters with valid numbers' do
+  xit "replaces characters with valid numbers" do
     expression = "SEND + MORE = MONEY"
 
     result = Alphametics.solve(expression)
