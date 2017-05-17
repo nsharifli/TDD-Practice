@@ -1,0 +1,3 @@
+class Alphametics
+
+end
